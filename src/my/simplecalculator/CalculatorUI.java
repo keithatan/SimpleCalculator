@@ -61,6 +61,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Simple Calculator");
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
