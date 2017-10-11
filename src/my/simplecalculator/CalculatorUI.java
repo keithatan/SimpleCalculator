@@ -411,8 +411,15 @@ public class CalculatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        operation = "=";
+        operation = "+";
+        if (neg == true)
+        {
+        calc1 = 0 - Double.parseDouble(jTextField1.getText());
+        }
+        else
+        {
         calc1 = Double.parseDouble(jTextField1.getText());
+        }
         jTextField1.setText("0");
         
        // else
@@ -423,37 +430,87 @@ public class CalculatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void equalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalBtnActionPerformed
-        if (operation.equals("="))
+        if (operation.equals("+"))
         {
-            double sum = calc1 + Double.parseDouble(jTextField1.getText());
+            double num = 0;
+            if (neg == true)
+            {
+            num = 0 - Double.parseDouble(jTextField1.getText());
+            }
+            else
+            {
+            num = Double.parseDouble(jTextField1.getText());
+            }
+            
+            double sum = calc1 + num;
             jTextField1.setText(Double.toString(sum));
             calc1 = sum;
             done = true;
         }
         if (operation.equals("/"))
         {
-            double sum = calc1 / Double.parseDouble(jTextField1.getText());
+            double num = 0;
+            if (neg == true)
+            {
+            num = 0 - Double.parseDouble(jTextField1.getText());
+            }
+            else
+            {
+            num = Double.parseDouble(jTextField1.getText());
+            }
+            
+            double sum = calc1 / num;
             jTextField1.setText(Double.toString(sum));
             calc1 = sum;
             done = true;
         }
         if (operation.equals("*"))
         {
-            double sum = calc1 * Double.parseDouble(jTextField1.getText());
+            double num = 0;
+            if (neg == true)
+            {
+            num = 0 - Double.parseDouble(jTextField1.getText());
+            }
+            else
+            {
+            num = Double.parseDouble(jTextField1.getText());
+            }
+            
+            double sum = calc1 * num;
             jTextField1.setText(Double.toString(sum));
             calc1 = sum;
             done = true;
         }
         if (operation.equals("%"))
         {
-            double sum = calc1 % Double.parseDouble(jTextField1.getText());
+            double num = 0;
+            if (neg == true)
+            {
+            num = 0 - Double.parseDouble(jTextField1.getText());
+            }
+            else
+            {
+            num = Double.parseDouble(jTextField1.getText());
+            }
+            
+            double sum = calc1 % num;
             jTextField1.setText(Double.toString(sum));
             calc1 = sum;
             done = true;
         }
         if (operation.equals("-"))
         {
-            double sum = calc1 - Double.parseDouble(jTextField1.getText());
+            double num = 0;
+            if (neg == true)
+            {
+            num = 0 - Double.parseDouble(jTextField1.getText());
+            }
+            else
+            {
+            num = Double.parseDouble(jTextField1.getText());
+            }
+            
+            double sum = calc1 - num;
             jTextField1.setText(Double.toString(sum));
             calc1 = sum;
             done = true;
@@ -469,26 +526,57 @@ public class CalculatorUI extends javax.swing.JFrame {
 
     private void divBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divBtnActionPerformed
         operation = "/";
+        if (neg == true)
+        {
+        calc1 = 0 - Double.parseDouble(jTextField1.getText());
+        }
+        else
+        {
         calc1 = Double.parseDouble(jTextField1.getText());
+        }
         jTextField1.setText("0");
     }//GEN-LAST:event_divBtnActionPerformed
 
     private void subBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subBtnActionPerformed
         operation = "-";
+        
+        if (neg == true)
+        {
+        calc1 = 0 - Double.parseDouble(jTextField1.getText());
+        }
+        else
+        {
         calc1 = Double.parseDouble(jTextField1.getText());
+        }
         jTextField1.setText("0");
     }//GEN-LAST:event_subBtnActionPerformed
 
     private void modBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modBtnActionPerformed
         operation = "%";
+        if (neg == true)
+        {
+        calc1 = 0 - Double.parseDouble(jTextField1.getText());
+        }
+        else
+        {
         calc1 = Double.parseDouble(jTextField1.getText());
+        }
         jTextField1.setText("0");
     }//GEN-LAST:event_modBtnActionPerformed
 
     private void mulBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulBtnActionPerformed
         operation = "*";
+        if (neg == true)
+        {
+        calc1 = 0 - Double.parseDouble(jTextField1.getText());
+        }
+        else
+        {
         calc1 = Double.parseDouble(jTextField1.getText());
+        }
+        
         jTextField1.setText("0");
+       
     }//GEN-LAST:event_mulBtnActionPerformed
 
     private void pnBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pnBtnActionPerformed
